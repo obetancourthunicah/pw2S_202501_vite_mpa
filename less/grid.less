@@ -18,8 +18,14 @@
             border:1px solid @primary-color-dark;
         }
         .generarColumns('', 6);
-        .generarColumns(#breaks-prefix[tablet], 12);
-        .generarColumns(#breaks-prefix[desktop], 12);
-        .generarColumns(#breaks-prefix[wide], 12);
+        @media (min-width: #breaks[tablet]){
+            .generarColumns(#breaks-prefix[tablet], 12);
+        }
+        @media (min-width: #breaks[desktop]){
+            .generarColumns(#breaks-prefix[desktop], 12);
+        }
+        @media (min-width: #breaks[wide]){
+            .generarColumns(#breaks-prefix[wide], 12);
+        }
     }
 }
